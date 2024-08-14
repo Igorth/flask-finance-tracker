@@ -1,4 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-<p>This is where you can view your transactions.</p>
+<h2>View Transactions</h2>
+<form method="POST">
+    <label for="start_date">Start Date</label>
+    <input type="date" id="start_date" name="start_date" required><br>
+    <label for="end_date">End Date</label>
+    <input type="date" id="end_date" name="end_date" required><br>
+    <button type="submit">Filter</button>
+</form>
+<h3>Transaction List</h3>
+{% if transactions %}
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Description</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.date }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.category }}</td>
+            <td>{{ transaction.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No transactions found within the specified date range.</p>
+{% endif %}
 {% endblock %}
