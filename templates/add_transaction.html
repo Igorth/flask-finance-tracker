@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% include 'message.html' %}
 <h2>Add New Transaction</h2>
 <form method="POST" action="{{ url_for('add_transaction') }}">
     <labeL for="date">Date:</labeL>

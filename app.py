@@ -59,7 +59,7 @@ def add_transaction():
         description = request.form['description']
         CSV.add_entry(date, amount, category, description)
         flash('Transaction added successfully!', 'success')
-        return redirect(url_for('index'))
+
     return render_template('add_transaction.html')
 
 
