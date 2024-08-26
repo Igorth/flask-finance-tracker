@@ -1,4 +1,8 @@
 # Finance Tracker
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![Flask](https://img.shields.io/badge/Framework-Flask-red.svg)
+![pandas](https://img.shields.io/badge/Data-pandas-lightgrey.svg)
+![matplotlib](https://img.shields.io/badge/Visualization-matplotlib-yellow.svg)
 
 A finance tracking application built with Flask and Python. This application allows you to add, view, and filter financial transactions, and also provides instant feedback through success and error messages.
 
